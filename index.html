@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de 7 Pasos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Pantalla 1 -->
+        <div class="screen active" id="screen1">
+	    <h1>Paso 1</h1>
+            <table>
+                <tbody>
+                    <tr><td><img src="images/imagen1.png"></td><td><img src="images/imagen2.png"></td><td><img src="images/imagen3.png"></td><td><img src="images/imagen4.png"></td><td><img src="images/imagen5.png" alt="Imagen 5"></td><td><img src="images/imagen6.png" alt="Imagen 6"></td><td><img src="images/imagen7.png" alt="Imagen 7"></td><td><img src="images/imagen8.png" alt="Imagen 8"></td></tr>
+                    <tr><td><img src="images/imagen9.png"></td><td><img src="images/imagen10.png"></td><td><img src="images/imagen11.png"></td><td><img src="images/imagen12.png"></td><td><img src="images/imagen13.png" alt="Imagen 5"></td><td><img src="images/imagen14.png" alt="Imagen 6"></td><td><img src="images/imagen15.png" alt="Imagen 7"></td><td><img src="images/imagen16.png" alt="Imagen 8"></td></tr>
+                    <tr><td><img src="images/imagen17.png"></td><td><img src="images/imagen18.png"></td><td><img src="images/imagen19.png"></td><td><img src="images/imagen20.png"></td><td><img src="images/imagen21.png" alt="Imagen 5"></td><td><img src="images/imagen22.png" alt="Imagen 6"></td><td><img src="images/imagen23.png" alt="Imagen 7"></td><td><img src="images/imagen24.png" alt="Imagen 8"></td></tr>
+                    <tr><td><img src="images/imagen25.png"></td><td><img src="images/imagen26.png"></td><td><img src="images/imagen27.png"></td><td><img src="images/imagen28.png"></td><td><img src="images/imagen29.png" alt="Imagen 5"></td><td><img src="images/imagen30.png" alt="Imagen 6"></td><td><img src="images/imagen31.png" alt="Imagen 7"></td><td><img src="images/imagen32.png" alt="Imagen 8"></td></tr>
+                </tbody>
+            </table>
+            <button onclick="nextScreen(2)">Siguiente</button>
+        </div>
+
+        <!-- Pantallas 2 a 6 -->
+        <div class="screen" id="screen2">
+	    <h1>Paso 2</h1>
+            <table>
+                <tbody>
+                    <tr><td><img src="images/imagen17.png"></td><td><img src="images/imagen18.png"></td><td><img src="images/imagen19.png"></td><td><img src="images/imagen20.png"></td></tr>
+                    <tr><td><img src="images/imagen21.png"></td><td><img src="images/imagen22.png"></td><td><img src="images/imagen23.png"></td><td><img src="images/imagen24.png"></td></tr>
+                    <tr><td><img src="images/imagen25.png"></td><td><img src="images/imagen26.png"></td><td><img src="images/imagen27.png"></td><td><img src="images/imagen28.png"></td></tr>
+                    <tr><td><img src="images/imagen29.png"></td><td><img src="images/imagen30.png"></td><td><img src="images/imagen31.png"></td><td><img src="images/imagen32.png"></td></tr>
+                </tbody>
+            </table>
+            <label><input type="radio" name="option2" value="SI" onchange="enableNextButton(2)"> SI</label>
+            <label><input type="radio" name="option2" value="NO" onchange="enableNextButton(2)"> NO</label>
+            <br><br>
+            <button onclick="prevScreen(1)">Anterior</button>
+            <button id="nextBtn2" onclick="nextScreen(3)" disabled>Siguiente</button>
+        </div>
+
+        <!-- Repetir pantallas 3 a 6 con cambios de IDs -->
+        <!-- Por ejemplo, pantalla 3 -->
+        <div class="screen" id="screen3">
+	    <h1>Paso 3</h1>
+            <table>
+                <tbody>
+                    <tr><td><img src="images/imagen9.png"></td><td><img src="images/imagen10.png"></td><td><img src="images/imagen11.png"></td><td><img src="images/imagen12.png"></td></tr>
+                    <tr><td><img src="images/imagen13.png"></td><td><img src="images/imagen14.png"></td><td><img src="images/imagen15.png"></td><td><img src="images/imagen16.png"></td></tr>
+                    <tr><td><img src="images/imagen25.png"></td><td><img src="images/imagen26.png"></td><td><img src="images/imagen27.png"></td><td><img src="images/imagen28.png"></td></tr>
+                    <tr><td><img src="images/imagen29.png"></td><td><img src="images/imagen30.png"></td><td><img src="images/imagen31.png"></td><td><img src="images/imagen32.png"></td></tr>
+                </tbody>
+            </table>
+            <label><input type="radio" name="option3" value="SI" onchange="enableNextButton(3)"> SI</label>
+            <label><input type="radio" name="option3" value="NO" onchange="enableNextButton(3)"> NO</label>
+            <br><br>
+            <button onclick="prevScreen(2)">Anterior</button>
+            <button id="nextBtn3" onclick="nextScreen(4)" disabled>Siguiente</button>
+        </div>
+
+
+        <div class="screen" id="screen4">
+	    <h1>Paso 4</h1>
+            <table>
+                <tbody>
+                    <tr><td><img src="images/imagen5.png"></td><td><img src="images/imagen6.png"></td><td><img src="images/imagen7.png"></td><td><img src="images/imagen8.png"></td></tr>
+                    <tr><td><img src="images/imagen13.png"></td><td><img src="images/imagen14.png"></td><td><img src="images/imagen15.png"></td><td><img src="images/imagen16.png"></td></tr>
+                    <tr><td><img src="images/imagen21.png"></td><td><img src="images/imagen22.png"></td><td><img src="images/imagen23.png"></td><td><img src="images/imagen24.png"></td></tr>
+                    <tr><td><img src="images/imagen29.png"></td><td><img src="images/imagen30.png"></td><td><img src="images/imagen31.png"></td><td><img src="images/imagen32.png"></td></tr>
+
+                </tbody>
+            </table>
+            <label><input type="radio" name="option4" value="SI" onchange="enableNextButton(4)"> SI</label>
+            <label><input type="radio" name="option4" value="NO" onchange="enableNextButton(4)"> NO</label>
+            <br><br>
+            <button onclick="prevScreen(3)">Anterior</button>
+            <button id="nextBtn4" onclick="nextScreen(5)" disabled>Siguiente</button>
+        </div>
+
+
+        <div class="screen" id="screen5">
+	    <h1>Paso 5</h1>
+            <table>
+                <tbody>
+                    <tr><td><img src="images/imagen3.png"></td><td><img src="images/imagen4.png"></td><td><img src="images/imagen11.png"></td><td><img src="images/imagen12.png"></td></tr>
+                    <tr><td><img src="images/imagen19.png"></td><td><img src="images/imagen20.png"></td><td><img src="images/imagen27.png"></td><td><img src="images/imagen28.png"></td></tr>
+                    <tr><td><img src="images/imagen7.png"></td><td><img src="images/imagen8.png"></td><td><img src="images/imagen15.png"></td><td><img src="images/imagen16.png"></td></tr>
+                    <tr><td><img src="images/imagen23.png"></td><td><img src="images/imagen24.png"></td><td><img src="images/imagen31.png"></td><td><img src="images/imagen32.png"></td></tr>
+                </tbody>
+            </table>
+            <label><input type="radio" name="option5" value="SI" onchange="enableNextButton(5)"> SI</label>
+            <label><input type="radio" name="option5" value="NO" onchange="enableNextButton(5)"> NO</label>
+            <br><br>
+            <button onclick="prevScreen(4)">Anterior</button>
+            <button id="nextBtn5" onclick="nextScreen(6)" disabled>Siguiente</button>
+        </div>
+
+
+        <div class="screen" id="screen6">
+	    <h1>Paso 6</h1>
+            <table>
+                <tbody>
+                    <tr><td><img src="images/imagen2.png"></td><td><img src="images/imagen4.png"></td><td><img src="images/imagen6.png"></td><td><img src="images/imagen7.png"></td></tr>
+                    <tr><td><img src="images/imagen10.png"></td><td><img src="images/imagen12.png"></td><td><img src="images/imagen14.png"></td><td><img src="images/imagen16.png"></td></tr>
+                    <tr><td><img src="images/imagen18.png"></td><td><img src="images/imagen20.png"></td><td><img src="images/imagen22.png"></td><td><img src="images/imagen24.png"></td></tr>
+                    <tr><td><img src="images/imagen26.png"></td><td><img src="images/imagen28.png"></td><td><img src="images/imagen30.png"></td><td><img src="images/imagen32.png""></td></tr>
+                </tbody>
+            </table>
+            <label><input type="radio" name="option6" value="SI" onchange="enableNextButton(6)"> SI</label>
+            <label><input type="radio" name="option6" value="NO" onchange="enableNextButton(6)"> NO</label>
+            <br><br>
+            <button onclick="prevScreen(5)">Anterior</button>
+            <button id="nextBtn6" onclick="nextScreen(7)" disabled>Siguiente</button>
+        </div>
+
+
+
+
+
+ 	 <!-- Pantalla 7 -->
+	<div class="screen" id="screen7">
+    		<table>
+        		<tbody>
+            			<tr><td><img src="images/img1.jpg" alt="Imagen Final"></td></tr>
+        		</tbody>
+    		</table>
+    	<button onclick="location.reload()">Jugar Nuevamente</button>
+	</div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

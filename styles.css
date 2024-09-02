@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Evitar scroll innecesario */
+}
+
+.screen {
+    display: none;
+    text-align: center;
+}
+
+.screen.active {
+    display: block;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 15px; /* Espacio entre celdas */
+    width: 100%;
+    max-width: 800px; /* Tamaño máximo de la tabla */
+    margin: 0 auto;
+}
+
+td {
+    padding: 0;
+    overflow: hidden;
+    background-color: #fff; /* Fondo blanco para las celdas */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Sombra en las celdas */
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+table img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain; 
+    border-radius: 10px; 
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
+
+table img:hover {
+    transform: scale(1.1) translateY(-5px); /* Zoom y elevación */
+    filter: brightness(1.2); /* Aumenta el brillo */
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada */
+}
+
+.screen#screen2 img,
+.screen#screen3 img,
+.screen#screen4 img,
+.screen#screen5 img,
+.screen#screen6 img {
+    max-height: 100px; /* Altura máxima ajustada para las imágenes de las pantallas 2-6 */
+}
+
+button {
+    padding: 12px 25px;
+    margin: 20px;
+    border: none;
+    border-radius: 25px;
+    background-color: #4CAF50; /* Color verde armónico */
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.15); /* Sombra en los botones */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Efectos de transición */
+}
+
+button:hover {
+    background-color: #45a049; /* Color más oscuro al pasar el ratón */
+    transform: translateY(-3px); /* Efecto de elevación al pasar el ratón */
+}
+
+button:disabled {
+    background-color: #cfcfcf; /* Color gris para botones deshabilitados */
+    cursor: not-allowed;
+}
+
+label {
+    font-size: 18px;
+    margin: 10px;
+    color: #333;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+}
+
+input[type="radio"]:checked + label {
+    font-weight: bold;
+    color: #4CAF50; /* Color verde cuando está seleccionado */
+}
